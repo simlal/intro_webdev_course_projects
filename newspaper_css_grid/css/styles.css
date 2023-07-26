@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Creepster', cursive;
+    text-align: center;
+    margin: 50px;
+}
+
+h2 {
+    font-family: 'Creepster', cursive;
+    text-align: center;
+}
+
+
+article {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newspaper-container {
+    display: grid;
+    grid-template-areas: 
+    "nav-header nav-header nav-header"
+    "story1 story2 story3"
+    "story4 story5 story5";
+    /* grid-gap: 1px; */
+    width: 75%;
+    margin: auto;
+}
+
+.sections-navbar {
+    grid-area: nav-header;
+    border: 1px solid black;
+}
+
+.sections-list {
+    list-style-type: none;
+    font-family: "Creepster", cursive;
+}
+
+.stories {
+    border: 1px solid black;
+}
+
+.story1 {
+    grid-area: story1;
+}
+
+.story2 {
+    grid-area: story2;
+}
+
+.photo-schuldiner {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding: 5px;
+}
+
+.story3 {
+    grid-area: story3;
+}
+
+.story4 {
+    grid-area: story4;
+}
+
+.story5 {
+    grid-area: story5;
+}
+
+.sections-list {
+    display: flex;
+    justify-content: space-evenly;
+    /* width: 500px; */        
+}
+
