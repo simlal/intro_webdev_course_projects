@@ -15,7 +15,7 @@ a:hover {
 }
 
 .projects-list {
-    list-style-type:symbols(">");
+    list-style-type: symbols(">");
     text-align: center;
     width: 500px;
     margin: auto;
