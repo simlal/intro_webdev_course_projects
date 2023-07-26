@@ -1,0 +1,11 @@
+html {
+    font-family: 'Courier New', Courier, monospace
+}
+
+.projects-list {
+    list-style-type:symbols(">");
+}
+
+.projects-list li {
+    margin-bottom: 20px;
+}
