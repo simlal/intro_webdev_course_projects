@@ -6,6 +6,6 @@ html {
     list-style-type:symbols(">");
 }
 
-.projects-list li {
+.project {
     margin-bottom: 20px;
 }
