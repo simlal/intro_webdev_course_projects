@@ -2,10 +2,30 @@ html {
     font-family: 'Courier New', Courier, monospace
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main-title {
+    text-align: center;
+}
+
 .projects-list {
     list-style-type:symbols(">");
+    text-align: center;
+    width: 500px;
+    margin: auto;
 }
 
 .project {
-    margin-bottom: 20px;
+    padding: 40px 0px;
+    border-bottom: 1px solid black;
+}
+
+.project:last-child {
+    border-bottom: none;
 }
