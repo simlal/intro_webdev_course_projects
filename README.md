@@ -3,7 +3,4 @@ Web dev basics refresher with exercise projects from Brian Holt's "Complete Intr
 
 
 ## Projects and deployement
-\#TODO Deploy projects to Github Pages
-
-
-1. Simple blog with html only
+\#TODO Update readme + deploy gh-pages
