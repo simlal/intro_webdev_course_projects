@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee masters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="cm-container">
+
+        <header class="cm-header-container">
+            <a href=""><img class="cm-logo" src="./img/coffee_masters_logo.png" alt="coffee masters logo"></a>
+            <h1>Coffee masters</h1>
+        </header>
+
+        <section class="box items-container">
+            <h2 class="box-title order">ITEMS</h2>
+            <ul class="items-list">
+                <li class="item">
+                    <div class="quantity">1x</div>
+                    <ul class="item-option-list">
+                        <li class="item-option main">Capuccino</li>
+                        <li class="item-option option">Lite foam</li>
+                    </ul>
+                    <div class="price">$ 3.35</div>
+                </li>
+                <li class="item">
+                    <div class="quantity">1x</div>
+                    <ul class="item-option-list">
+                        <li class="item-option main">Capuccino</li>
+                        <li class="item-option option">Lite milk</li>
+                        <li class="item-option option">Double espresso</li>
+                    </ul>
+                    <div class="price">$ 3.85</div>
+                </li>
+                <li class="item">
+                    <div class="quantity">1x</div>
+                    <ul class="item-option-list">
+                        <li class="item-option main">Croissant</li>
+                        <li class="item-option option">Butter</li>
+                    </ul>
+                    <div class="price">$ 3.35</div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="box name-container">
+            <h2 class="box-title order-name">NAME</h2>
+            <div class="input-container order-name">
+                <label for="info-name" class="input-label">Name for order</label>
+                <input id="info-name" type="text">
+            </div>
+        </section>
+
+        <section class="box payment-container">
+            <h2 class="box-title card-number">PAYMENT</h2>
+            <div class="input-container card-number">
+                <label for="card-num" class="input-label">Card number</label>
+                <input id="card-num" type="text">
+            </div>
+            <div class="input-container card-ccv">
+                <label for="card-ccv" class="input-label">CCV</label>
+                <input id="card-ccv" type="text">
+            </div>
+        </section>
+
+        <section class="totals-container">
+            <table class="totals-table">
+                <tr class="row subtotal">
+                    <td>Subtotal:</td>
+                    <td class="right-col">$ 9.65</td>
+                </tr>
+                <tr class="row taxes">
+                    <td>Tax:</td>
+                    <td class="right-col">$ 0.82</td>
+                </tr>
+                <tr class="row total">
+                    <td>Total:</td>
+                    <td class="right-col">$10.47</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="order-container">
+            <button class="order-button" type="button" onclick="alert('order sent!')">
+                Place order
+            </button>
+        </section>
+
+    </div>
+</body>
+
+</html>
