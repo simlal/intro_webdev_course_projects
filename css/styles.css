@@ -10,19 +10,30 @@ a:hover {
     text-decoration: underline;
 }
 
+.main-title-container {
+    padding: 25px;
+}
+
 .main-title {
     text-align: center;
 }
 
+.projects {
+    font-size: 18px;
+}
+
 .projects-list {
-    list-style-type: symbols(">");
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
     text-align: center;
-    width: 500px;
     margin: auto;
+
 }
 
 .project {
-    padding: 40px 0px;
+    padding: 50px 0px;
     border-bottom: 1px solid black;
 }
 
