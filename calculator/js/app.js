@@ -20,6 +20,51 @@ function getButtonValue(selector) {
     
 }
 
+function convertString(value) {
+    const numberValue = Number(value);
+    if (!isNaN(numberValue)) {
+        return numberValue;
+    } else {
+        return value;
+    }
+}
+
+function calculate() {
+    const numbers = () =>{
+        const arr = []
+        for (i = 0; i <= 9; i++) {
+            arr.push(i.toString())
+        }
+        return arr
+    }
+    const stringInts = numbers();
+
+    // Define calculator elements
+    const calculatorButtons = document.querySelectorAll(".input-btn, .operator-btn");
+    const output = document.getElementById("output")
+    let outputValue = output.innerHTML
+
+    calculatorButtons.forEach(element => {
+        element.addEventListener("click", event => {
+            let clickedElementValue = element.innerHTML
+            console.log("clicked on", convertString(clickedElementValue));
+
+            // Ouput update when numbers clicked
+            if (stringInts.includes(clickedElementValue)){
+                if (output.innerHTML === "0") {
+                    outputValue = clickedElementValue
+                } else {
+                    outputValue += clickedElementValue
+                }
+            // console.log("outputValue=", outputValue)
+            output.innerHTML = outputValue
+            console.log(output.innerHTML)
+
+            }
+        });
+    });
+    }
+
 function copyResults () {
     let copyButtonClicked = false
     // Display tooltip on hover
@@ -73,6 +118,8 @@ function copyResults () {
     });
 }
 
-// Remove tooltip copy output box
+// Calculate the output based on inputs listeners
+calculate();
 
+// Update style for copy tooltip + copy value
 copyResults();
