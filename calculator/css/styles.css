@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+    font-weight: bold;
+}
+
+/* HEADER CONT */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.header-title {
+    text-align: center;
+    text-transform: uppercase;
+    width: 500px;
+    padding: 20px;
+    box-shadow: -10px 0 0 0 orangered,
+                 10px 0 0 0 orangered,
+                 0 -10px 0 0 orangered,
+                 0 10px 0 0 orangered;
+    background-color: lightgray;
+  }
+
+/* MAIN CALCULATOR */
+.calculator-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.calculator-container {
+    display: grid;
+    font-size: 40px;
+    grid-template-areas: 
+    "output output output output"
+    "reset reset remove divisor"
+    "seven eight nine multiplier"
+    "four five six minus"
+    "one two three plus"
+    "zero zero zero equals";
+    width: 33%;
+    border: 1px solid black;
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+.calculator-container > div {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Remove right border from the last column */
+.calculator-container .output,
+.calculator-container .divisor,
+.calculator-container .multiplier,
+.calculator-container .minus,
+.calculator-container .plus,
+.calculator-container .equals {
+    border-right: none;
+}
+
+/* Remove bottom border from the last row */
+.calculator-container .zero,
+.calculator-container .equals {
+    border-bottom: none;
+}
+
+/* Output styling */
+.calculator-container .output {
+    background-color: black;
+    color: white;
+    justify-content: flex-end;
+    text-align: right;
+    font-weight: normal;
+
+}
+
+/*input button style */
+.input-btn {
+    background-color: lightgray;
+}
+
+/* operator button styles */
+.operator-btn {
+    background-color: rgb(255, 108, 54);
+    color: white;
+}
+
+/* Grid-template-selectors */
+/* 1st row */
+.output {
+    grid-area: output;
+}
+/* 2nd row */
+.reset {
+    grid-area: reset;
+}
+.remove {
+    grid-area: clear;
+}
+.divisor {
+    grid-area: divisor;
+}
+/* 3rd row */
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
+.multiplier {
+    grid-area: multiplier;
+}
+/* 4th row */
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.minus {
+    grid-area: minus;
+}
+/* 5th row */
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.plus {
+    grid-area: plus;
+}
+/* 6th row */
+.zero {
+    grid-area: zero;
+}
+.equals {
+    grid-area: equals;
+}
