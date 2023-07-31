@@ -17,36 +17,40 @@
     <section class="calculator-section">
         <div class="calculator-container">
             <!-- 1st row -->
-            <div class="output">output</div>
+            <div id="output">0123</div>
             
             <!-- 2nd row -->
-            <button class="input-btn reset">C</button>
-            <button class="input-btn clear">&#8592;</button>
+            <button class="input-btn mod reset">C</button>
+            <button class="input-btn mod clear">&#8592;</button>
             <button class="operator-btn buttonisor">÷</button>
 
             <!-- 3rd row -->
-            <button class="input-btn seven">7</button>
-            <button class="input-btn eight">8</button>
-            <button class="input-btn nine">9</button>
+            <button class="input-btn num seven">7</button>
+            <button class="input-btn num eight">8</button>
+            <button class="input-btn num nine">9</button>
             <button class="operator-btn multiplier">x</button>
 
             <!-- 4th row -->
-            <button class="input-btn four">4</button>
-            <button class="input-btn five">5</button>
-            <button class="input-btn six">6</button>
+            <button class="input-btn num four">4</button>
+            <button class="input-btn num five">5</button>
+            <button class="input-btn num six">6</button>
             <button class="operator-btn minus">-</button>
 
             <!-- 5th row -->
-            <button class="input-btn one">1</button>
-            <button class="input-btn two">2</button>
-            <button class="input-btn three">3</button>
+            <button class="input-btn num one">1</button>
+            <button class="input-btn num two">2</button>
+            <button class="input-btn num three">3</button>
             <button class="operator-btn plus">+</button>
 
             <!-- 6th row -->
             <button class="input-btn zero">0</button>
             <button class="operator-btn equals">=</button>
         </div>
-        <button class="copy-output">Copy results</div>
+        <div class="copy-container">
+            <button class="copy-output">Copy results</div>
+            <div class="tooltip-text">Click to copy the results</p>
+        </div>
     </section>
+    <script src="js/app.js"></script>
 </body>
 </html>
