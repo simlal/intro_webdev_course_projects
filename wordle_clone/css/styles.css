@@ -1,0 +1,51 @@
+body,
+html {
+    background-color: rgb(231, 231, 231);
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header-cont {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+    padding: 15px;
+}
+.header-cont > * {
+    padding: 5px;
+}
+
+.header-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.wordleboard {
+    max-width: 295px;
+    width: 100%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+  }
+  
+  .wordleboard-letter {
+    height: 45px;
+    width: 45px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 2px solid grey;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
