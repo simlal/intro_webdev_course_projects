@@ -20,7 +20,7 @@ function getButtonValue(selector) {
     
 }
 
-function convertString(value) {
+function convertStringToNumber(value) {
     const numberValue = Number(value);
     if (!isNaN(numberValue)) {
         return numberValue;
@@ -43,27 +43,66 @@ function calculate() {
     const calculatorButtons = document.querySelectorAll(".input-btn, .operator-btn");
     const output = document.getElementById("output")
     let outputValue = output.innerHTML
+    let calculationValueArr = new Array()
 
     calculatorButtons.forEach(element => {
         element.addEventListener("click", event => {
-            let clickedElementValue = element.innerHTML
-            console.log("clicked on", convertString(clickedElementValue));
+            let clickedEleVal = element.innerHTML
+            console.log("clicked on", convertStringToNumber(clickedEleVal));
 
             // Ouput update when numbers clicked
-            if (stringInts.includes(clickedElementValue)){
+            if (stringInts.includes(clickedEleVal)){
                 if (output.innerHTML === "0") {
-                    outputValue = clickedElementValue
+                    outputValue = clickedEleVal
                 } else {
-                    outputValue += clickedElementValue
+                    outputValue += clickedEleVal
                 }
-            // console.log("outputValue=", outputValue)
+            // Reset output when C clicked
+            }
+            if (element.className === "input-btn mod reset") {
+                outputValue = "0"
+            }
+
+            // Remove 1 num on backspace
+            if (element.className === "input-btn mod clear") {
+                outputValue = outputValue.slice(0, -1)
+            }
+            // Push to stack when operator clicked
+            if (element.className === "operator-btn divisor") {
+                calculationValueArr.push(convertStringToNumber(outputValue))
+                calculationValueArr.push("/")
+                outputValue = "0"
+            }
+            if (element.className === "operator-btn multiplier") {
+                calculationValueArr.push(convertStringToNumber(outputValue))
+                calculationValueArr.push("*")
+                outputValue = "0"
+            }
+            if (element.className === "operator-btn minus") {
+                calculationValueArr.push(convertStringToNumber(outputValue))
+                calculationValueArr.push("-")
+                outputValue = "0"
+            }
+            if (element.className === "operator-btn plus") {
+                calculationValueArr.push(convertStringToNumber(outputValue))
+                calculationValueArr.push("+")
+                outputValue = "0"
+            }
+
             output.innerHTML = outputValue
             console.log(output.innerHTML)
-
+            // Perform calculation on "=" click
+            if (element.className === "operator-btn equals") {
+                calculationValueArr.push(convertStringToNumber(outputValue));
+                let calculationValue = eval(calculationValueArr.join(' '));
+                output.innerHTML = calculationValue;
+                // reset output + calculationArr
+                outputValue = "0";
+                calculationValueArr = [];
             }
         });
     });
-    }
+}
 
 function copyResults () {
     let copyButtonClicked = false
